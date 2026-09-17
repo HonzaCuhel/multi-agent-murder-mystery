@@ -1,5 +1,7 @@
 # Crosscurrents results page
 
+[View the live results page](https://honzacuhel.github.io/multi-agent-murder-mystery/)
+
 Minimal, dependency-free static research-results page. Only `site/` is intended for publication. No input data, scenario text, private document links, or trajectories are included.
 
 ## Preview
