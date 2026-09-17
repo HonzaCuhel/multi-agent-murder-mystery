@@ -15,8 +15,8 @@ Links().feed(html)
 assert html.count('<figure ') == 11
 assert 'class="study"' not in html
 assert 'class="brand"' not in html
-assert 'src="assets/illustrative-inheritance-dag-v6.png"' in html
-assert 'src="assets/methodology-flowchart-v3.png"' in html
+assert 'src="assets/illustrative-inheritance-dag-v7.png"' in html
+assert 'src="assets/methodology-flowchart-v4.png"' in html
 for heading in ('How well were models able to reconstruct what happened?',
                 'How much did models have to reason?',
                 'How effective were models at reconstruction?'):
@@ -33,5 +33,5 @@ for value in ('docs.google.com', 'drive.google.com', '/Users/', 'reports_index.c
 allowed = {'.html', '.css', '.png', '.pdf', '.svg', '.json'}
 assert all(p.suffix in allowed for p in root.rglob('*') if p.is_file())
 assert not list(root.rglob('*.prompt.*')), 'Generation prompts must not be published'
-assert (root / 'assets/illustrative-inheritance-dag-v6.pdf').is_file()
+assert (root / 'assets/illustrative-inheritance-dag-v7.pdf').is_file()
 print('PASS: eleven figures, three results sections, all links resolve, no prompts or prohibited private references.')
