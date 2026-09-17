@@ -16,7 +16,7 @@ assert html.count('<figure ') == 11
 assert 'class="study"' not in html
 assert 'class="brand"' not in html
 assert 'src="assets/illustrative-inheritance-dag-v7.png"' in html
-assert 'src="assets/methodology-flowchart-v4.png"' in html
+assert 'src="assets/methodology-flowchart-v5.png"' in html
 for heading in ('How well were models able to reconstruct what happened?',
                 'How much did models have to reason?',
                 'How effective were models at reconstruction?'):
