@@ -1,4 +1,6 @@
 :root{--ink:#172c35;--muted:#52616a;--accent:#007f73;--line:#e0e6e7;--paper:#fff;--soft:#f4f7f6;--ease:cubic-bezier(.23,1,.32,1)}
+.dag-example{max-width:760px;margin:0 0 72px}.dag-example h3{font-size:28px}.dag-example p{color:var(--muted);font-size:16px;max-width:70ch}
+@media(max-width:480px){header{flex-wrap:wrap;gap:16px}header nav{width:100%;justify-content:space-between}}
 #reasoning figure,#cost figure{max-width:820px;margin-inline:auto}
 #reasoning figure{max-width:660px}
 #cost h2{font-size:clamp(25px,2.3vw,30px)}

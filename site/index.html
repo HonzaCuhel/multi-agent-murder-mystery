@@ -4,11 +4,11 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Aggregate results from a study of language-model monitors reconstructing a multi-agent murder mystery.">
   <meta name="color-scheme" content="light"><title>Crosscurrents — Monitoring results</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <a class="skip" href="#results">Skip to results</a>
-<header><a class="brand" href="#">Crosscurrents<span>Multi-agent monitoring</span></a><nav aria-label="Main"><a href="#results">Results</a><a href="#reasoning">Reasoning</a><a href="#cost">Cost</a></nav></header>
+<header><a class="brand" href="#">Crosscurrents<span>Multi-agent monitoring</span></a><nav aria-label="Main"><a href="#methodology">Method</a><a href="#results">Results</a><a href="#reasoning">Reasoning</a><a href="#cost">Cost</a></nav></header>
 <main>
   <section class="intro">
     <h1>Finding the culprit isn’t<br class="desktop"> understanding the story.</h1>
@@ -16,6 +16,11 @@
     <p class="summary">Monitors often identified the culprit, yet recovered less than half of the underlying story. More reasoning helped—but the full picture remained incomplete.</p>
     <div class="study"><span><strong>10</strong> game runs</span><span><strong>250</strong> monitor reports</span><span><strong>209</strong> rubric items</span></div>
     <a class="text-link" href="#results">Explore the results <span aria-hidden="true">↓</span></a>
+  </section>
+  <section id="methodology" class="chapter">
+    <div class="section-copy"><h2>From an authored story<br>to a reconstruction.</h2><p>A human-authored and reviewed story provides the reference. Agents investigate it; monitors reconstruct it from the interaction record; LLM judges compare their reports against the rubric.</p></div>
+    <figure id="methodology-flowchart"><a class="plot" href="assets/methodology-flowchart-v2.png" aria-label="Open the methodology flowchart at full resolution"><img loading="lazy" src="assets/methodology-flowchart-v2.png" width="1642" height="958" alt="A human-authored story forms a directed acyclic graph. LLM preparation creates scenario and role packs for interacting agents and a separate reference rubric for grading. Monitors reconstruct the story from interaction logs. Two LLM graders and a reviewer assess the reports. Example aggregate Astra high scores are 45.6% story reconstruction and 78.0% culprit accuracy."></a><figcaption><span><b>Methodology.</b> The human-authored story precedes LLM preparation of the scenario and rubric. The rubric feeds grading independently of monitor reports. Numerical scores shown are example aggregates for Astra high.</span><a href="assets/methodology-flowchart-v2.pdf">PDF</a></figcaption></figure>
+    <div class="dag-example" id="figure-a"><h3>An illustrative causal graph.</h3><p>Figure A. An illustrative directed acyclic graph (DAG) linking events, character motivations and actions. In this example, a wealthy woman dies and leaves her estate to her elder daughter, who purchases a house and flaunts her wealth to her younger sister. Resentful at receiving nothing and believing she would inherit upon her sister’s death, the younger sister pushes her from the balcony. The full graph used to seed the multi-agent murder-mystery investigation pertains to a different story and contains 184 nodes and 229 edges, covering the underlying history and supporting evidence. This simplified example illustrates the approach.</p><a class="text-link" href="assets/illustrative-inheritance-dag-v2.pdf">View Figure A · PDF</a></div>
   </section>
   <section id="results" class="chapter">
     <div class="section-copy"><h2>The answer is only<br>part of the story.</h2><p>Astra high fully recovered <strong>45.6%</strong> of rubric items, followed by Astra low at <strong>40.2%</strong>. Across configurations, omissions were much more common than incorrect reconstructions.</p></div>

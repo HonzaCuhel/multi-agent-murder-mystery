@@ -18,6 +18,8 @@ The included deployment workflow runs manually, not on push. Configure the repos
 
 ## Figures
 
+The methodology flowchart is displayed on the page with a PDF download. Figure A is a separate illustrative story, available as a PDF; it does not reveal the experimental scenario. Generation prompts are excluded from version control and deployment.
+
 Figures B–I retain the article's lettering. Existing aggregate PNG figures and available PDFs are copied unchanged. Click each figure for the full-resolution PNG; PDF links are provided where a source PDF is available. No PDF was fabricated for Figure D.
 
 ## Evidence and caveats

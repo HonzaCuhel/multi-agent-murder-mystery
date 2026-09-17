@@ -3,3 +3,6 @@ output/
 .impeccable/
 PRODUCT.md
 DESIGN.md
+*.prompt.txt
+*.prompt.json
+prompts/
