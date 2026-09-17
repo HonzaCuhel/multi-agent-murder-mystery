@@ -15,11 +15,18 @@ Links().feed(html)
 assert html.count('<figure ') == 10
 assert 'class="study"' not in html
 assert 'class="brand"' not in html
-assert 'src="assets/illustrative-inheritance-dag-v2.png"' in html
+assert 'src="assets/illustrative-inheritance-dag-v3.png"' in html
+vectors = list(root.glob('assets/*.svg'))
+assert len(vectors) == 7
+for vector in vectors:
+    svg = vector.read_text()
+    assert '<image' not in svg and '<script' not in svg, vector.name
+    assert '/Users/' not in svg and 'reports_index.csv' not in svg, vector.name
+    assert f'src="assets/{vector.name}"' in html, vector.name
 for value in ('docs.google.com', 'drive.google.com', '/Users/', 'reports_index.csv', 'api_key', 'PRIVATE KEY'):
     assert value not in html, f'Unexpected private reference: {value}'
 allowed = {'.html', '.css', '.png', '.pdf', '.svg', '.json'}
 assert all(p.suffix in allowed for p in root.rglob('*') if p.is_file())
 assert not list(root.rglob('*.prompt.*')), 'Generation prompts must not be published'
-assert (root / 'assets/illustrative-inheritance-dag-v2.pdf').is_file()
+assert (root / 'assets/illustrative-inheritance-dag-v3.pdf').is_file()
 print('PASS: ten figures including inline story, no removed header or stats, all links resolve, no prompts or prohibited private references.')
